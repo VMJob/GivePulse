@@ -14,24 +14,89 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">GivePulse</a>
+      <%= link_to 'GivePulse', root_url, class: 'navbar-brand' %> 
 
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+          <br />
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <%= link_to 'Home', root_url, class: 'nav-link' %>
           </li>
+          <br />
           <li class="nav-item">
-            <a class="nav-link" href="#">Donate</a>
+            <%= link_to 'Donate', root_url, class: 'nav-link' %>
           </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+          <br />
+           <li class="nav-item">
+            <%= link_to 'Churches', root_url, class: 'nav-link' %> 
+          </li>
+          <br /> 
+           <li class="nav-item">
+            <%= link_to 'Nonprofits', root_url, class: 'nav-link' %>
+          </li>
+         </ul> 
+         <ul class="navbar-nav">
+           <li class="nav-item">
+            <%= link_to 'Create an Account', new_user_registration_path, class: 'nav-link' %>  
+           </li>
+           <br />
+           <li class="nav-item">
+            <%= link_to 'Log In', new_user_session_path, class: 'nav-link' %> 
+           </li>
+         </ul>
       </div>
     </nav>
+    
+    <% if notice.present? %>
+      <p class="alert alert-info"><%= notice %></p>
+    <% end %>
+      <% if alert.present? %>
+    <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
 
     <%= yield %>
+
+
+    <div id="footer">
+      <div class="container">
+      <div class="row">
+      <div class="col-12 col-sm-3">
+        <%= link_to 'Love is Contagious', '#' %>
+      </div>
+      <div class="col-12 col-sm-3">
+        <b>About</b>
+        <br />
+        <%= link_to 'Team', '#' %>
+        <br />
+        <%= link_to 'Privacy Policy', '#' %>
+      </div>
+      <div class="col-12 col-sm-3">
+        <b>Contact</b>
+        <br />
+        givepulse@hotmail.com
+        <br />
+        2410 Donna Jane Road
+        <br />
+        Austin TX, 78654
+      </div>
+      <div class="col-12 col-sm-3">
+        <b>Social</b>
+         <br />
+         <br />
+          <%= link_to 'https://github.com/bigvee-design' do %>
+            <span class="fa fa-github-square fa-2x social-button"></span>
+          <% end %>
+          <%= link_to 'https://www.facebook.com/vmjob?ref=bookmarks' do %>
+            <span class="fa fa-facebook-square fa-2x social-button"></span>
+          <% end %>
+          <%= link_to 'https://twitter.com/Vincent_Job' do %>
+            <span class="fa fa-twitter-square fa-2x social-button"></span>
+         <% end %>
+      </div>
+      </div>
+     </div>
+    </div>
+   <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   </body>
 </html>
