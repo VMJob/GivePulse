@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :donations
+  has_many :donate
   has_many :churches
   has_many :nonprofits       
 end

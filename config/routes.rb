@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
 	root 'static_pages#index'
-	resource :donate, only: [:index, :show]
-	 resource :churches, only: :create
-	  resources :nonprofits, only: :create
-	   resources :sites
+	resources :donate
+	resources :churches # TODO: RESTRICT ROUTES PROPERLY
+	resources :nonprofits
+	resources :sites
 end
 
 

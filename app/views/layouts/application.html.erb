@@ -24,15 +24,15 @@
           </li>
           <br />
           <li class="nav-item">
-            <%= link_to 'Donate', root_url, class: 'nav-link' %>
+            <%= link_to 'Donate', new_donate_path, class: 'nav-link' %>
           </li>
           <br />
            <li class="nav-item">
-            <%= link_to 'Churches', root_url, class: 'nav-link' %> 
+            <%= link_to 'Churches', churches_path, class: 'nav-link' %> 
           </li>
           <br /> 
            <li class="nav-item">
-            <%= link_to 'Nonprofits', root_url, class: 'nav-link' %>
+            <%= link_to 'Nonprofits', new_nonprofit_path, class: 'nav-link' %>
           </li>
          </ul> 
          <ul class="navbar-nav">
@@ -61,7 +61,7 @@
       <div class="container">
       <div class="row">
       <div class="col-12 col-sm-3">
-        <%= link_to 'Love is Contagious', '#' %>
+        <%= link_to 'Love is Contagious', new_donate_path %>
       </div>
       <div class="col-12 col-sm-3">
         <b>About</b>
@@ -100,3 +100,5 @@
   <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   </body>
 </html>
+
+
